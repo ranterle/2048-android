@@ -183,13 +183,6 @@ public class MainActivity extends Activity {
     
     @Override
     public void onBackPressed() {
-        long currentTime = System.currentTimeMillis();
-        if (Math.abs(currentTime - mLastBackPress) > mBackPressThreshold) {
-            pressBackToast.show();
-            mLastBackPress = currentTime;
-        } else {
-            pressBackToast.cancel();
-            super.onBackPressed();
-        }
+        throw new RuntimeException("Failed");
     }
 }
